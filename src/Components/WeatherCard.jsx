@@ -21,7 +21,7 @@ function WeatherCard({ location }) {
 
    useEffect(() => {
       async function getWeather() {
-         await fetch(`http://api.weatherapi.com/v1/current.json?key=8ad4834ee1244f6cb2e143628230308&q=${location}`)
+         await fetch(`https://api.weatherapi.com/v1/current.json?key=8ad4834ee1244f6cb2e143628230308&q=${location}`)
          .then(resp => { return resp.ok ? resp : Error(resp) })
          .then(resp => resp.json())
          .then(resp => setweather({
