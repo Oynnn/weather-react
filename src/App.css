@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap');
+
+
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body{
+   height: 100vh;
+   background-color: rgb(98, 172, 245);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-family: 'Fira Sans', sans-serif;
+}
+
+
+
+
+
+#location-card{
+   background-color: white;
+   width: 320px;
+   height: 200px;
+   border-radius: 3px;
+   display: flex;
+   flex-direction: column;
+}
+
+.get-weather-text{
+   height: 40px;
+   font-size: 18px;
+   color: rgb(98, 172, 245);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.or-container{
+   width: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin: auto;
+}
+
+#location-form{
+   display: flex;
+}
+
+#location-input {
+   width: 58%;
+   height: 40px;
+   margin: auto;
+   margin-top: 15px;
+   border-radius: 8px;
+   border: 2px solid rgb(98, 172, 245);
+   outline: none;
+   padding-left: 1rem;
+   padding-right: 1rem;
+}
+
+#location-button {
+   margin: auto;
+   margin-bottom: 15px;
+   padding: 12.5px 30px;
+   border: 0;
+   border-radius: 100px;
+   background-color: #2ba8fb;
+   color: #ffffff;
+   font-weight: Bold;
+   transition: all 0.5s;
+}
+
+#location-button:hover {
+   background-color: #6fc5ff;
+   box-shadow: 0 0 20px #6fc5ff50;
+   transform: scale(1.1);
+   cursor: pointer;
+}
+
+#location-button:active {
+   background-color: #3d94cf;
+   transition: all 0.25s;
+   box-shadow: none;
+   transform: scale(0.98);
+}
+
+
+
+
+
+#weather-card{
+   width: 320px;
+   height: 330px;
+   background-color: white;
+   border-radius: 3px;
+   display: flex;
+   flex-direction: column;
+}
+
+#go-back{
+   outline: none;
+   border: none;
+   width: 30%;
+   margin: auto;
+   background-color: white;
+}
+
+#go-back :hover{
+   cursor: pointer;
+}
+
+#condition-container{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+#condition-container-text{
+   display: flex;
+   width: auto;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+.location{
+   text-align: center;
+}
+
+#temperature{
+   text-align: center;
+   font-size: 90px;
+   /* margin: auto; */
+}
+
+#humadity-and-wind-speed{
+   display: flex;
+   border-top: 1px solid gray;
+   width: 100%;
+   height: 70px;
+   margin-top: auto;
+}
+
+.container{
+   width: 50%;
+   height: 100%;
+   margin-right: 0;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.border{
+   border-right: 1px solid gray;
+}
+
+.icon{
+   font-size: 50px;
+}
+
+.WandHtext{
+   font-size: 20px;
+   margin-left: 6px;
+}
+
+.loader {
+   width: 48px;
+   height: 48px;
+   background: #FF3D00;
+   display: block;
+   margin: 20px auto;
+   position: relative;
+   box-sizing: border-box;
+   animation: rotationBack 1s ease-in-out infinite reverse;
+}
+
+.loader::before {
+   content: '';
+   box-sizing: border-box;
+   left: 0;
+   top: 0;
+   transform: rotate(45deg);
+   position: absolute;
+   width: 48px;
+   height: 48px;
+   background: #FF3D00;
+   box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+}
+
+.loader::after {
+   content: '';
+   box-sizing: border-box;
+   width: 32px;
+   height: 32px;
+   border-radius: 50%;
+   position: absolute;
+   left: 50%;
+   top: 50%;
+   background: #FFF;
+   transform: translate(-50%, -50%);
+   box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+}
+
+@keyframes rotationBack {
+   0% {
+      transform: rotate(0deg);
+   }
+
+   100% {
+      transform: rotate(-360deg);
+   }
+}
